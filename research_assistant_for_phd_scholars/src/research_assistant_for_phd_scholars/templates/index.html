@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Topic Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <button id="themeToggle" class="theme-toggle-btn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+    <div class="container">
+        <div class="search-container">
+            <h1>Research Topic Generator</h1>
+            <p class="subtitle">Enter a topic to generate a detailed research report</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter your research topic (e.g., latest AI technologies)...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                    Generate
+                </button>
+            </div>
+
+            <div class="options-container">
+                <div class="option active">
+                    <i class="fas fa-book"></i>
+                    <span>Research Report</span>
+                </div>
+                <div class="option">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Trends Analysis</span>
+                </div>
+                <div class="option">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Key Insights</span>
+                </div>
+                <div class="option">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Summary</span>
+                </div>
+            </div>
+
+            <div id="results" class="results-container">
+                <!-- Results will be displayed here -->
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p class="loading-text">Generating your research report...</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
